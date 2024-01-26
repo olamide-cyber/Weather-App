@@ -1,0 +1,12 @@
+.current-day-weather-forecast {
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-forecast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    justify-content: space-around
+}
