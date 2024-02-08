@@ -8,42 +8,41 @@ function WeatherForecastList(props) {
                     return (  
                         <div className="grid-container" >
                             <div className="grid-item">
-                                <p>Wind</p>
-                                <p>{data.wind.speed}</p>
+                                <h4>Wind</h4>
+                                <p>{data.wind.deg}.c</p>
+                                <p>{data.wind.speed}km/h</p>
                             </div>
                             <div className="grid-item">
-                                <p>Humidity</p>
+                                <h4>Humidity</h4>
                                 <p>{data.main.humidity}%</p>
                             </div>
                             <div className="grid-item">
-                                <p>Real feel</p>
+                                <h4>Real feel</h4>
                                 <p>{data.main.temp}.c</p>
                             </div>  
                             <div className="grid-item">
-                                <p>Visibility</p>
+                                <h4>Visibility</h4>
                                 <p>{data.visibility}</p>
                             </div>
                             <div className="grid-item">
-                                <p>Pressure</p>
+                                <h4>Pressure</h4>
                                 <p>{data.main.pressure} mb</p>
                             </div>
                             <div className="grid-item">
-                                <p>Timezone</p>
+                                <h4>Timezone</h4>
                                 <p>{data.timezone}</p>
                             </div>  
                             <div className="grid-item">
-                                <p>Temperature History</p>
+                                <h4>Temperature History</h4>
                                 <p>{data.main.temp}.c</p>
                             </div>
                             <div className="grid-item">
-                                <p>Sun</p>
-                                <p>Rise   <span>5:17am</span></p>
-                                <p>Set    <span>5:17am</span></p>
+                                <h4>Feels Like</h4>
+                                <p>{data.main.feels_like}.c</p>
                             </div>
                             <div className="grid-item">
-                                <p>Moon</p>
-                                <p>Rise   <span>5:17am</span></p>
-                                <p>Set    <span>5:17am</span></p>
+                                <h4>Clouds</h4>
+                                <p>{data.clouds.all}</p>
                             </div>  
                         </div>
                     )

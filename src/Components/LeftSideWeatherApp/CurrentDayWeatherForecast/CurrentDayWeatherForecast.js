@@ -1,8 +1,6 @@
 import './CurrentDayWeatherForecast.css';
                                   
 function CurrentDayWeatherForecast(props) {
-    console.log('this is me>>', props.weatherData)
-
     const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     const d = new Date();
     let day = weekday[d.getDay()];
