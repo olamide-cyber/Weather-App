@@ -5,8 +5,15 @@ import CurrentDayWeatherForecast from './CurrentDayWeatherForecast/CurrentDayWea
 function LeftSideWeatherApp(props) {
   return (
     <div className='left-side-container'>
-      <SearchBar />
-      <CurrentDayWeatherForecast weatherData={props.weatherData} />
+      <SearchBar 
+          handleChange={props.handleChange}
+          inputValue={props.inputValue}
+          handleSearch={props.handleSearch}
+      />
+      <CurrentDayWeatherForecast 
+          weatherData={props.weatherData}
+          iconUrl={props.iconUrl}
+      />
     </div>
   );
 }

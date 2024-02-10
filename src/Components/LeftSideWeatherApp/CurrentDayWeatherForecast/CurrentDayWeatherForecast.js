@@ -7,6 +7,7 @@ function CurrentDayWeatherForecast(props) {
 
     return (
         <div className='current-day-weather-forecast'>
+            <img className='weather-image-icon' src={props.iconUrl} alt="weather-icon"/>
             {
                 props.weatherData.map(data => {
                     return (
