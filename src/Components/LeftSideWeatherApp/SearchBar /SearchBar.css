@@ -1,6 +1,18 @@
-input {
+.search-container {
+    position: relative;
+}
+
+.search-input {
     margin: 5px;
     width: 250px;
-    padding: 5px;
+    padding: 8px;
     outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+.search-icon {
+    position: absolute;
+    top: 30%;
+    right: 10px;
 }

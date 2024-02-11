@@ -19,7 +19,13 @@ function WeatherApp() {
     function handleSearch(event) {
         event.preventDefault()
         fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=${API_KEY}`)
-        .then(response => response.json())
+        .then(response => {
+            if(response.ok) {
+                return response.json()
+            } else {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+        })
         .then(data => {
             fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${data[0].lat}&lon=${data[0].lon}&appid=${API_KEY}&units=metric`)
             .then(newResponse => newResponse.json())
@@ -29,6 +35,10 @@ function WeatherApp() {
                 fetch(`https://openweathermap.org/img/wn/${newIcon}@2x.png`)
                 .then(icon => setIconUrl(icon.url))
             })
+        })
+        .catch(error => {
+            alert('Invalid location! Please search for a valid location');
+            console.error('Fetch error:', error.message);
         })
     }
 
