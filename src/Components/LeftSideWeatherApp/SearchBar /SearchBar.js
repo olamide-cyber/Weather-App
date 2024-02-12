@@ -1,17 +1,29 @@
 import './SearchBar.css';
+import { useState} from 'react';
 
 function SearchBar(props) {
+    const [location, setLocation] = useState('');
+
+    function handleChange(e) {
+        setLocation(e.target.value)
+    }
+
+    function handleSearch(event) {
+        event.preventDefault()
+        props.handleSearch(location)
+    }
+
     return (
-        <div>
-            <form onSubmit={props.handleSearch}>
-                <input
-                    type='text'
-                    placeholder='Enter location'
-                    onChange={props.handleChange}
-                    value={props.inputValue}
-                />
-            </form>
-        </div>
+        <form className='search-container' onSubmit={handleSearch}>
+            <input
+                className='search-input'
+                type='text'
+                placeholder='Enter location'
+                onChange={handleChange}
+                value={location}
+            />
+            <div className='search-icon'>&#128269;</div>
+        </form>
     );
 }
 

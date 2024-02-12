@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# weather api key
+.env
+
 # production
 /build
 
