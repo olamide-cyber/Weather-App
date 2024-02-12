@@ -6,7 +6,7 @@ function WeatherForecastList(props) {
              {
                 props.weatherData.map(data => {
                     return (  
-                        <div className="grid-container" >
+                        <div className="grid-container" key={data.id} >
                             <div className="grid-item">
                                 <h4>Wind</h4>
                                 <p>{data.wind.deg}°C</p>

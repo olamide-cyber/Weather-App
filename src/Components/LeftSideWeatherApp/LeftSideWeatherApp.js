@@ -6,8 +6,6 @@ function LeftSideWeatherApp(props) {
   return (
     <div className='left-side-container'>
       <SearchBar 
-          handleChange={props.handleChange}
-          inputValue={props.inputValue}
           handleSearch={props.handleSearch}
       />
       <CurrentDayWeatherForecast 
