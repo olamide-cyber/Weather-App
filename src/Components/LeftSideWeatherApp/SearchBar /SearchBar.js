@@ -8,13 +8,13 @@ function SearchBar(props) {
         setLocation(e.target.value)
     }
 
-    function handleSearch(event) {
+    function onSearch(event) {
         event.preventDefault()
         props.handleSearch(location)
     }
 
     return (
-        <form className='search-container' onSubmit={handleSearch}>
+        <form className='search-container' onSubmit={onSearch}>
             <input
                 className='search-input'
                 type='text'

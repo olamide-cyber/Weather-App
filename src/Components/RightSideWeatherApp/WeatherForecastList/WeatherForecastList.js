@@ -1,54 +1,54 @@
 import './WeatherForecastList.css';
 
 function WeatherForecastList(props) {
+    const weatherData = props.weatherData
+
     return (
-        <div>
-             {
-                props.weatherData.map(data => {
-                    return (  
-                        <div className="grid-container" key={data.id} >
-                            <div className="grid-item">
-                                <h4>Wind</h4>
-                                <p>{data.wind.deg}°C</p>
-                                <p>{data.wind.speed}km/h</p>
-                            </div>
-                            <div className="grid-item">
-                                <h4>Humidity</h4>
-                                <p>{data.main.humidity}%</p>
-                            </div>
-                            <div className="grid-item">
-                                <h4>Real feel</h4>
-                                <p>{data.main.temp}°C</p>
-                            </div>  
-                            <div className="grid-item">
-                                <h4>Visibility</h4>
-                                <p>{data.visibility}</p>
-                            </div>
-                            <div className="grid-item">
-                                <h4>Pressure</h4>
-                                <p>{data.main.pressure} mb</p>
-                            </div>
-                            <div className="grid-item">
-                                <h4>Timezone</h4>
-                                <p>{data.timezone}</p>
-                            </div>  
-                            <div className="grid-item">
-                                <h4>Temperature History</h4>
-                                <p>{data.main.temp}°C</p>
-                            </div>
-                            <div className="grid-item">
-                                <h4>Feels Like</h4>
-                                <p>{data.main.feels_like}°C</p>
-                            </div>
-                            <div className="grid-item">
-                                <h4>Clouds</h4>
-                                <p>{data.clouds.all}</p>
-                            </div>  
+        <>
+            {
+                weatherData && (
+                    <div className="grid-container">
+                        <div className="grid-item">
+                            <h4>Wind</h4>
+                            <p>{weatherData.wind?.deg}°C</p>
+                            <p>{weatherData.wind?.speed}km/h</p>
                         </div>
-                    )
-                })
-             }
-        </div>
+                        <div className="grid-item">
+                            <h4>Humidity</h4>
+                            <p>{weatherData.main?.humidity}%</p>
+                        </div>
+                        <div className="grid-item">
+                            <h4>Real feel</h4>
+                            <p>{weatherData.main?.temp}°C</p>
+                        </div>  
+                        <div className="grid-item">
+                            <h4>Visibility</h4>
+                            <p>{weatherData?.visibility}</p>
+                        </div>
+                        <div className="grid-item">
+                            <h4>Pressure</h4>
+                            <p>{weatherData.main?.pressure} mb</p>
+                        </div>
+                        <div className="grid-item">
+                            <h4>Timezone</h4>
+                            <p>{weatherData?.timezone}</p>
+                        </div>  
+                        <div className="grid-item">
+                            <h4>Temperature History</h4>
+                            <p>{weatherData.main?.temp}°C</p>
+                        </div>
+                        <div className="grid-item">
+                            <h4>Feels Like</h4>
+                            <p>{weatherData.main?.feels_like}°C</p>
+                        </div>
+                        <div className="grid-item">
+                            <h4>Clouds</h4>
+                            <p>{weatherData.clouds?.all}</p>
+                        </div>  
+                    </div>
+                )
+            }
+        </>
     );
 }
     
