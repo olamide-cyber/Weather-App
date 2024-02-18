@@ -10,7 +10,7 @@ function LeftSideWeatherApp(props) {
 
     async function handleSearch(location) {
         try {
-            const geoCodingData = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=${API_KEY}`)
+            const geoCodingData = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=${API_KEY}`)
             .then(response => {
                 if(response.ok) {
                     return response.json()
