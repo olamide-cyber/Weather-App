@@ -3,7 +3,7 @@
 }
 
 .search-input {
-    margin: 5px;
+    margin-top: 10px;
     width: 250px;
     padding: 8px;
     outline: none;
@@ -15,4 +15,25 @@
     position: absolute;
     top: 30%;
     right: 10px;
+}
+
+.search-button {
+    background-color: aquamarine;
+    padding: 8px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+}
+
+@media only screen and (min-width: 32px) and (max-width: 1023px) {
+    .search-icon {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 2700px) {
+    .search-button {
+        display: none;
+    }
 }

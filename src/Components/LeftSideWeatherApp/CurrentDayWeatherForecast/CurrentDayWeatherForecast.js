@@ -29,12 +29,12 @@ function CurrentDayWeatherForecast(props) {
                     (
                         <div className='weather-forecast'>
                             <img className='weather-image-icon' src={iconUrl} alt=''/>
-                            <div className='weather-temp'>{weatherData.main.temp}<span className='deg'>°C</span></div>
-                            {weatherData.weather && <p>{weatherData.weather[0].description}</p>}
+                            <div className='weather-temp'>{weatherData.main?.temp}<span className='deg'>°C</span></div>
+                            {weatherData.weather && <p>{weatherData.weather[0]?.description}</p>}
                             <p>{new Date().toDateString()}</p>
                             <span>{day}, <span>{new Date().toLocaleTimeString()}</span></span>
                             {isDayTime ? <p>Day</p> : <p>Night</p>}
-                            <p className='weather-location'>{weatherData.name}, {weatherData.sys.country}</p>
+                            <p className='weather-location'>{weatherData.name}, {weatherData.sys?.country}</p>
                         </div> 
                     )
             }

@@ -7,10 +7,13 @@ function WeatherApp() {
     const [currentWeatherData, setCurrentWeatherData] = useState();
 
     return (
-    <div className='weather-app'>
-        <LeftSideWeatherApp onLoadWeatherData={weatherData => setCurrentWeatherData(weatherData)} />
-        <RightSideWeatherApp weatherData={currentWeatherData}/>
-    </div>
+        <div>
+            <h1 className='weather-app-header'>My Cool Weather App</h1>
+            <div className='weather-app'>
+                <LeftSideWeatherApp onLoadWeatherData={weatherData => setCurrentWeatherData(weatherData)} />
+                <RightSideWeatherApp weatherData={currentWeatherData}/>
+            </div>
+        </div>
     );
 }
 

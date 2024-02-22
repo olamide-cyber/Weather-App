@@ -3,7 +3,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
     background-color: #bbdfff;
-    height: 100vh;
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 2700px) {
+    .left-side-container {
+        width: 400px;
+    }
 }
