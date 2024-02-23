@@ -37,3 +37,10 @@
         display: none;
     }
 }
+
+@media only screen and (max-width: 340px) {
+    .search-input {
+        min-width: 50px;
+        max-width: 180px;
+    }
+}
